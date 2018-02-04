@@ -46,8 +46,9 @@ gulp.task('reload', function() {
 
 gulp.task('serve', ['sass'], function() {
   browserSync.init({
-    proxy: "http://localhost:8090/bonGulp/src/"
-    //server: config.src
+    //proxy: "http://localhost:8090/bonGulp/src/"
+    //proxy: "http://localhost:8888/bonGulp/src/"
+    server: config.src
   });
 
   gulp.watch([config.htmlin, config.phpin, config.jsin], ['reload']);
